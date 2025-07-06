@@ -1,4 +1,4 @@
- 
+Sure! Here's your cleaned and **properly formatted `README.md`** — ready to copy and paste directly into GitHub or a markdown editor:
 
 ---
 
@@ -52,5 +52,9 @@ Then open `index.html` in any browser — no installation needed.
 * No frameworks or build tools
 
 ---
+
+
+
+```
 
 
