@@ -5,7 +5,7 @@
 
 A clean and responsive **personal portfolio website** built with HTML, CSS, and JavaScript to showcase professional journey, skills, and contact details.
 
-🔗 **GitHub Repository**: [https://github.com/shreeragula/portfolio\_website](https://github.com/shreeragula/portfolio_website)
+🔗 **Live Link**:[https://github.com/shreeragula/portfolio_website](https://shreeragula.github.io/portfolio_website/)
 
 ---
 
