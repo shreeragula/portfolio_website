@@ -738,6 +738,122 @@
             transform: translateY(-2px);
         }
 
+        .project-tag.repo-link {
+            background: linear-gradient(135deg, var(--accent), var(--secondary)) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            text-decoration: none !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+            font-weight: 500 !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+        }
+
+        .project-tag.repo-link:hover {
+            background: linear-gradient(135deg, var(--secondary), var(--accent)) !important;
+            box-shadow: 0 5px 12px rgba(103, 72, 239, 0.45) !important;
+            transform: translateY(-3px) scale(1.05) !important;
+        }
+
+        /* Additional Repositories Grid */
+        .additional-repos {
+            margin-top: 60px;
+        }
+
+        .repo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .repo-mini-card {
+            background: rgba(67, 97, 238, 0.08);
+            border: 1px solid rgba(72, 149, 239, 0.2);
+            border-radius: 12px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+            min-height: 190px;
+        }
+
+        body.light-mode .repo-mini-card {
+            background: rgba(72, 149, 239, 0.05);
+        }
+
+        .repo-mini-card:hover {
+            transform: translateY(-5px);
+            background: rgba(72, 149, 239, 0.15);
+            border-color: var(--accent);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .repo-mini-card h4 {
+            font-size: 1.25rem;
+            color: var(--accent);
+            margin-bottom: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .repo-mini-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            opacity: 0.85;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        body.light-mode .repo-mini-card p {
+            color: var(--text-dark);
+        }
+
+        .repo-mini-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 15px;
+        }
+
+        .repo-mini-tag {
+            background: rgba(164, 190, 221, 0.15);
+            color: var(--accent);
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+        }
+
+        .repo-mini-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: var(--transition);
+            width: 100%;
+            text-align: center;
+        }
+
+        .repo-mini-link:hover {
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            box-shadow: 0 4px 8px rgba(103, 72, 239, 0.3);
+            transform: translateY(-1px);
+            color: #ffffff;
+        }
+
         /* Contact Section */
         #contact {
             background: var(--glass);
@@ -1297,7 +1413,7 @@
                             </div>
                         </div>
                         <div class="language-card">
-                            <img src="file:///C:/Users/rupas/Downloads/Infor_logo.svg" alt="ERP">
+                            <img src="./Infor_logo.svg" alt="ERP">
                             <h3>ERP TOOL</h3>
                             <div class="star-rating">
                                 <i class="fas fa-star"></i>
@@ -1308,7 +1424,7 @@
                             </div>
                         </div>
                         <div class="language-card">
-                            <img src="file:///C:/Users/rupas/Downloads/file.svg" alt="ERP">
+                            <img src="./rapidminer_logo.svg" alt="RapidMiner">
                             <h3>RapidMiner Tool</h3>
                             <div class="star-rating">
                                 <i class="fas fa-star"></i>
@@ -1324,39 +1440,45 @@
                     <h3>Notable Projects</h3>
                     <div class="project-cards-container">
                         <div class="project-card">
-                            <img src="https://fluentcrm.com/wp-content/uploads/2022/06/11-Best-Ways-to-Market-Online-Courses-the-Right-Way-100.jpg" alt="Course recomendation System">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTurZaJYOJmicHoasL2RLslcDNe0gv66jNnGsAhreeoltHer2O2eNq5e7rV&s=10" alt="CareerPath AI">
                             <div class="project-card-content">
-                                <h3>Course recomendation System</h3>
-                                <h4>A personalized recommendation system that suggests relevant online courses based on user preferences. Utilizes Natural Language Processing for understanding course content and Machine Learning for similarity-based recommendations.</h4>
+                                <h3>CareerPath AI – AI-Powered Career Development & Learning System</h3>
+                                <h4>An AI-powered career development platform that provides personalized course recommendations, career roadmaps, mock interviews, and interactive study planning. Utilizes Natural Language Processing and semantic similarity for relevant course recommendations and Generative AI for personalized career guidance, interview evaluation, and real-time feedback.</h4>
                                 <div class="project-tags">
+                                    <span class="project-tag">Generative AI (LLMs)</span>
                                     <span class="project-tag">Natural Language Processing (NLP)</span>
-                                    <span class="project-tag">Machine Learning</span>
-                                    <span class="project-tag">Python Web Framework (Flask)</span>
+                                    <span class="project-tag">Semantic Similarity</span>
+                                    <span class="project-tag">Python (Flask / FastAPI)</span>
+                                    <a href="https://github.com/shreeragula/CareerPath-AI" target="_blank" class="project-tag repo-link"><i class="fab fa-github"></i> Repository</a>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="project-card">
                             <img src="https://www.lifewire.com/thmb/TSDO4OiyiOYTTTqx4gbXORg2_0Y=/360x240/filters:no_upscale():max_bytes(150000):strip_icc()/Translations-c6272ebd941342bfa04830d6b928a709.jpg" alt="Easy Speak Translate">
-                            <div class="Easy Speak Translate">
+                            <div class="project-card-content">
                                 <h3>Easy Speak Translate</h3>
                                 <h4>A lightweight web application for real-time language translation and pronunciation support. Enables users to translate text between multiple languages with a clean and intuitive interface.</h4>
                                 <div class="project-tags">
                                     <span class="project-tag">HTML, CSS, JavaScript</span>
                                     <span class="project-tag">Google Translate API</span>
+                                    <a href="https://github.com/shreeragula/easy_speak_translate" target="_blank" class="project-tag repo-link"><i class="fab fa-github"></i> Repository</a>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="project-card">
-                            <img src="https://media.springernature.com/lw725/springer-cms/rest/v1/content/20370312/data/v2" alt="Liver Cirrhosis Prediction System">
+                            <img src="https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png" alt="NeuroBlog">
                             <div class="project-card-content">
-                                <h3>Liver Cirrhosis Prediction System</h3>
-                                <h4>An advanced machine learning solution that predicts the risk of liver cirrhosis using clinical and laboratory data. Designed to support healthcare professionals with fast, reliable, and interpretable results via a user-friendly web interface.</h4>
+                                <h3>NeuroBlog – AI-Powered Blogging Platform</h3>
+                                <h4>An intelligent AI-powered blogging platform designed to simplify content creation and enhance the digital publishing experience. The platform enables users to create, edit, publish, and manage blogs while utilizing a fine-tuned Large Language Model to generate structured and relevant blog content from user prompts. It also provides secure user authentication, advanced blog search, interactive features such as comments and likes/dislikes, and personalized dashboards for managing user content and activities.</h4>
                                 <div class="project-tags">
-                                    <span class="project-tag">Python (Pandas, Scikit-learn)</span>
-                                    <span class="project-tag">Machine Learning</span>
-                                    <span class="project-tag">Data Analysis</span>
+                                    <span class="project-tag">Generative AI</span>
+                                    <span class="project-tag">Fine-Tuned LLMs</span>
+                                    <span class="project-tag">Web Development (Node.js / Express)</span>
+                                    <span class="project-tag">User Authentication</span>
+                                    <span class="project-tag">Database (MongoDB / SQL)</span>
+                                    <a href="https://github.com/shreeragula/NeuroBlog" target="_blank" class="project-tag repo-link"><i class="fab fa-github"></i> Repository</a>
                                 </div>
                             </div>
                         </div>
@@ -1365,23 +1487,25 @@
                             <img src="https://miro.medium.com/v2/resize:fit:1200/1*N-N1mnTdeeSM7lSlk6Kksw.jpeg" alt="Credit Card Fraud Detection">
                             <div class="project-card-content">
                                 <h3>Credit Card Fraud Detection</h3>
-                                <h4></h4>An intelligent system that analyzes historical transaction data to detect fraudulent activities in real time. Combines statistical insights with machine learning algorithms to accurately flag anomalies while minimizing false alerts, ensuring robust financial security.</h4>
+                                <h4>An intelligent system that analyzes historical transaction data to detect fraudulent activities in real time. Combines statistical insights with machine learning algorithms to accurately flag anomalies while minimizing false alerts, ensuring robust financial security.</h4>
                                 <div class="project-tags">
                                     <span class="project-tag">Machine Learning</span>
                                     <span class="project-tag">Natural Language Processing</span>
                                     <span class="project-tag">Python (Pandas, Scikit-learn)</span>
                                     <span class="project-tag">Data Visualization</span>
+                                    <a href="https://github.com/shreeragula/credit-card-fraud-detection" target="_blank" class="project-tag repo-link"><i class="fab fa-github"></i> Repository</a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-card">
-                            <img src="https://www.powerschool.com/wp-content/uploads/2025/02/student-management-system-blog-thumbnail-1432625-1.webp" alt="Student Management System">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcHiCtSXpFbm7GIb4qx98bwtNw6nAVCWhd1bpuvZImQg&s=10" alt="Student Management System">
                             <div class="project-card-content">
                                 <h3>Student Management System</h3>
                                 <h4>A streamlined web application designed for managing student records efficiently. It allows users to add, delete, and view students as well as manage departments. The interface is user-friendly, making it ideal for academic institutions to maintain organized records.</h4>
                                 <div class="project-tags">
-                                    <span class="project-tag">HTML, CSS, JavaScript </span>
-                                    <span class="project-tag">Node.js, Express.js  </span>
+                                    <span class="project-tag">HTML, CSS, JavaScript</span>
+                                    <span class="project-tag">Node.js, Express.js</span>
+                                    <a href="https://github.com/shreeragula/student_managment_system" target="_blank" class="project-tag repo-link"><i class="fab fa-github"></i> Repository</a>
                                 </div>
                             </div>
                         </div>
@@ -1394,17 +1518,19 @@
                                     <span class="project-tag">Platform: Infor ERP LN</span>
                                     <span class="project-tag">Language: 3GL & 4GL scripting, SQL</span>
                                     <span class="project-tag">Infor LN Development Tools (Sessions, Scripts, Tables, Forms)</span>
+                                    <a href="https://github.com/shreeragula/Procurement-Sales-Management-System" target="_blank" class="project-tag repo-link"><i class="fab fa-github"></i> Repository</a>
                                 </div>
                             </div>
                         </div> 
                         <div class="project-card">
-                            <img src="https://startinfinity.s3.us-east-2.amazonaws.com/production/blog/post/15/main/xXMabYYezGITsPPA8PduAZXEmXvz0Xr71FEQGqy4.png", alt ="TODO List Task Manager">
+                            <img src="https://startinfinity.s3.us-east-2.amazonaws.com/production/blog/post/15/main/xXMabYYezGITsPPA8PduAZXEmXvz0Xr71FEQGqy4.png" alt="TODO List Task Manager">
                             <div class="project-card-content">
                                 <h3>TODO List Task Manager</h3>
                                 <h4>A lightweight full-stack web application for managing personal tasks with active and archived states. This project demonstrates real-time task handling using Express.js and local JSON storage — ideal for learning RESTful API integration and frontend-backend interaction without a database.</h4>
                                 <div class="project-tags">
-                                    <span class="project-tag"> HTML, CSS, JavaScript</span>
+                                    <span class="project-tag">HTML, CSS, JavaScript</span>
                                     <span class="project-tag">Node.js with Express</span>
+                                    <a href="https://github.com/shreeragula/todo_list" target="_blank" class="project-tag repo-link"><i class="fab fa-github"></i> Repository</a>
                                 </div>
                             </div>
                         </div>                        
